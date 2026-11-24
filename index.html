@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega LBS Market | Tu bodega de confianza en el barrio</title>
+    <meta name="description" content="Bodega LBS Market: abarrotes, bebidas, lácteos, limpieza y ofertas frescas todos los días.">
+    <meta name="keywords" content="bodega, abarrotes, market, ofertas, Lima, Perú, LBS Market">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- 1. ENCABEZADO GLOBAL CON BUSCADOR, CARRITO Y MENÚ HAMBURGUESA -->
+<header class="encabezado-sitio">
+        <div class="contenedor-principal barra-navegacion">
+            <!-- Logotipo institucional -->
+            <a href="index.html" class="marca-logo">
+                <img src="img/logo-lbs.png" alt="Logo Bodega LBS Market" class="imagen-logo">
+                <div class="texto-logo">LBS <span>Market</span></div>
+            </a>
+
+            <!-- Barra de búsqueda (en el centro en móvil) -->
+            <form action="catalogo.html" method="get" class="formulario-busqueda-header">
+                <input type="text" name="buscar" placeholder="Buscar..." class="campo-busqueda-header">
+                <button type="submit" class="boton-lupa-header" aria-label="Buscar producto">
+                    <img src="img/iconos/lupa.svg" alt="Buscar" class="icono-svg-sm">
+                </button>
+            </form>
+
+            <!-- Menú de navegación (desplegable en móvil) -->
+            <nav id="menu-navegacion">
+                <ul class="lista-menu">
+                    <li><a href="index.html" class="enlace-menu pagina-activa">Inicio</a></li>
+                    <li><a href="catalogo.html" class="enlace-menu">Catálogo</a></li>
+                    <li><a href="ofertas.html" class="enlace-menu">Ofertas</a></li>
+                    <li><a href="nosotros.html" class="enlace-menu">Nosotros</a></li>
+                    <li><a href="contacto.html" class="enlace-menu">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Carrito y botón hamburguesa a la derecha -->
+            <div class="acciones-encabezado">
+                <button type="button" id="boton-carrito" class="boton-abrir-carrito" aria-label="Abrir carrito">
+                    <img src="img/iconos/carrito.svg" alt="Carrito" class="icono-svg-md">
+                    <span id="contador-carrito" class="contador-productos-carrito">0</span>
+                </button>
+
+                <button type="button" id="boton-menu-hamburguesa" class="boton-hamburguesa" aria-label="Abrir menú">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL DE INICIO (CARRUSEL HERO, CATEGORÍAS Y OFERTA) -->
+    <main>
+        <!-- Carrusel principal animado con jQuery (fadeOut / fadeIn) -->
+        <section class="carrusel-hero-inicio">
+            <!-- Diapositiva 1 -->
+            <div class="slide-hero slide-fondo-1 slide-activo">
+                <div class="contenedor-principal">
+                    <div class="texto-banner-inicio">
+                        <h1>Todo lo que necesitas, <span>cerca de ti</span></h1>
+                        <p>Productos frescos, abarrotes y bebidas al mejor precio del barrio.</p>
+                        <a href="catalogo.html" class="boton-amarillo">Ver Catálogo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diapositiva 2 -->
+            <div class="slide-hero slide-fondo-2">
+                <div class="contenedor-principal">
+                    <div class="texto-banner-inicio">
+                        <h1>Ofertas frescas <span>todos los días</span></h1>
+                        <p>Aprovecha nuestros combos familiares y descuentos de temporada.</p>
+                        <a href="ofertas.html" class="boton-amarillo">Ver Ofertas</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diapositiva 3 -->
+            <div class="slide-hero slide-fondo-3">
+                <div class="contenedor-principal">
+                    <div class="texto-banner-inicio">
+                        <h1>Haz tu pedido <span>rápido y fácil</span></h1>
+                        <p>Arma tu carrito en línea y recíbelo con la atención de siempre.</p>
+                        <a href="contacto.html" class="boton-amarillo">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Puntos indicadores del carrusel -->
+            <div class="indicadores-carrusel">
+                <span class="punto-indicador punto-activo"></span>
+                <span class="punto-indicador"></span>
+                <span class="punto-indicador"></span>
+            </div>
+        </section>
+
+        <!-- Carrusel de categorías con redirección directa al catálogo -->
+        <section class="seccion-categorias-inicio">
+            <div class="contenedor-principal">
+                <h2 class="titulo-seccion">Categorías</h2>
+
+                <div class="contenedor-carrusel-categorias">
+                    <button type="button" id="boton-cat-anterior" class="boton-flecha-carrusel" aria-label="Anterior">❮</button>
+
+                    <div class="ventana-categorias">
+                        <div class="pista-categorias" id="pista-categorias">
+                            <a href="catalogo.html?categoria=Abarrotes" class="tarjeta-categoria">
+                                <img src="img/cat-abarrotes.jpg" alt="Categoría Abarrotes">
+                                <h3>Abarrotes</h3>
+                            </a>
+                            <a href="catalogo.html?categoria=Bebidas" class="tarjeta-categoria">
+                                <img src="img/cat-bebidas.jpg" alt="Categoría Bebidas">
+                                <h3>Bebidas</h3>
+                            </a>
+                            <a href="catalogo.html?categoria=Lácteos" class="tarjeta-categoria">
+                                <img src="img/cat-lacteos.jpg" alt="Categoría Lácteos">
+                                <h3>Lácteos</h3>
+                            </a>
+                            <a href="catalogo.html?categoria=Limpieza" class="tarjeta-categoria">
+                                <img src="img/cat-limpieza.jpg" alt="Categoría Limpieza">
+                                <h3>Limpieza</h3>
+                            </a>
+                            <a href="catalogo.html?categoria=Snacks" class="tarjeta-categoria">
+                                <img src="img/cat-snacks.jpg" alt="Categoría Snacks y Golosinas">
+                                <h3>Snacks y Golosinas</h3>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button type="button" id="boton-cat-siguiente" class="boton-flecha-carrusel" aria-label="Siguiente">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner promocional destacado -->
+        <section class="contenedor-principal">
+            <div class="banner-promocional-mes">
+                <div class="info-banner-promocional">
+                    <img src="img/iconos/etiqueta-oferta.svg" alt="Ícono oferta" class="icono-svg-lg">
+                    <div>
+                        <h2>OFERTA DEL MES: ¡20% DE DESCUENTO!</h2>
+                        <p>En productos seleccionados de canasta básica.</p>
+                    </div>
+                </div>
+                <a href="ofertas.html" class="boton-oscuro">Ver Ofertas</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. PANEL LATERAL DEL CARRITO DE COMPRAS (COMPARTIDO) -->
+    <aside id="panel-carrito" class="panel-carrito-lateral">
+        <div>
+            <div class="cabecera-carrito">
+                <h3>Mi Carrito</h3>
+                <button type="button" id="boton-cerrar-carrito" class="boton-cerrar-carrito">✕</button>
+            </div>
+            <div id="lista-items-carrito" class="lista-items-carrito">
+                <p class="detalle-producto">Tu carrito está vacío. Agrega productos del catálogo.</p>
+            </div>
+        </div>
+
+        <div class="pie-carrito">
+            <div class="metodo-pago-carrito">
+                <p class="titulo-metodo-pago">Método de pago:</p>
+                <label class="opcion-pago-check">
+                    <input type="checkbox" id="pago-efectivo" class="check-metodo-pago" value="Efectivo" checked>
+                    Efectivo
+                </label>
+                <label class="opcion-pago-check">
+                    <input type="checkbox" id="pago-digital" class="check-metodo-pago" value="Digital (Yape / Plin)">
+                    Digital (Yape / Plin)
+                </label>
+            </div>
+            <p class="texto-total-carrito">Total: <strong id="total-carrito">S/ 0.00</strong></p>
+            <button type="button" id="boton-pedir-whatsapp" class="boton-amarillo boton-ancho-completo">
+                Pedir por WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <!-- 4. PIE DE PÁGINA GLOBAL -->
+        <footer class="pie-pagina-sitio">
+            <div class="contenedor-principal contenido-footer">
+                <div>
+                    <p>Diseño Web — Proyecto Final</p>
+                    <p>© 2026 Bodega LBS Market. Todos los derechos reservados.</p>
+                    <p>Autores: Camat_Inofuente_Pizconte | Ingeniería de Sistemas | Ciclo II</p>
+                </div>
+                <div class="redes-sociales-footer">
+                    <a href="#" class="enlace-red-social" aria-label="Facebook"><img src="img/iconos/facebook.svg" alt="Facebook" class="icono-svg-sm"></a>
+                    <a href="#" class="enlace-red-social" aria-label="Instagram"><img src="img/iconos/instagram.svg" alt="Instagram" class="icono-svg-sm"></a>
+                    <a href="#" class="enlace-red-social" aria-label="TikTok"><img src="img/iconos/tiktok.svg" alt="TikTok" class="icono-svg-sm"></a>
+                    <a href="#" class="enlace-red-social" aria-label="WhatsApp"><img src="img/iconos/whatsapp.svg" alt="WhatsApp" class="icono-svg-sm"></a>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Librería jQuery y Script Interactivo del Proyecto -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
